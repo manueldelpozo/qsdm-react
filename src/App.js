@@ -1,15 +1,19 @@
 import React, { Component } from "react";
-//import ReactDOM from "react-dom";
-import FormContainer from "./js/components/container/FormContainer";
+import { Route, Link } from "react-router-dom";
+import Loadable from "react-loadable";
 
-//import styles from './app.scss';
+import FormContainer from "./js/components/container/FormContainer";
+import Loading from './js/components/loading/Loading';
+
+let loadableForm = Loadable({
+    loader: () => import('./js/Components/container/FormContainer'),
+    loading: Loading,
+})
 
 class App extends Component {
     render() {
-        return <div><FormContainer/></div>
+        return <div className='app'><Route path="" component={FormContainer} /></div>
     }
 }
 
-//const app = document.getElementById("root");
-//app ? ReactDOM.render(<App />, app) : false;
 export default App;
