@@ -1,43 +1,29 @@
 {
   "name": "qsdm-react",
   "version": "1.0.0",
-  "description": "Profession Comparison",
+  "description": "Compare professions",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node server.js --ignore public/",
-    "dev": "webpack -md"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manueldelpozo/qsdm-react.git"
   },
-  "keywords": [
-    "professions",
-    "comparison"
-  ],
-  "author": "Manuel del Pozo",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/manueldelpozo/qsdm-react/issues"
   },
   "homepage": "https://github.com/manueldelpozo/qsdm-react#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-    "mongodb": "^3.1.6",
-    "npm": "^6.4.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^10.0.1",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^5.6.1",
-    "eslint-plugin-react": "^7.11.1",
-    "nodemon": "^1.18.4",
-    "webpack": "^4.20.2"
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }
