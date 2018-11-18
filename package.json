@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack",
-    "http-server": "http-server dist/"
+    "dev": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "build": "webpack -d"
   },
   "repository": {
     "type": "git",
@@ -40,10 +41,10 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "http-server": "^0.11.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "rimraf": "^2.6.2"
   }
 }

@@ -1,7 +1,20 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const path = require('path');
+const APP_DIR = path.join(__dirname, 'src');
+const BUILD_DIR = path.join(__dirname, 'dist');
+const VENDOR_LIBS = ['react', 'react-dom', 'react-router-dom'];
+
 module.exports = {
+  entry: {
+    bundle: APP_DIR + '/index.js',
+    vendor: VENDOR_LIBS
+  },
+  output: {
+    path: BUILD_DIR, 
+    filename: '[name].[chunkhash].js'
+  },
   module: {
     rules: [
       {
@@ -40,5 +53,5 @@ module.exports = {
       filename: "./index.html"
     }),
     new ExtractTextPlugin('style.css')
-  ],
+  ]
 };
