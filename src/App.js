@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import FormContainer from "./js/components/container/FormContainer";
 
-import styles from './app.scss';
+//import styles from './app.scss';
 
 class App extends Component {
     render() {
@@ -10,5 +10,6 @@ class App extends Component {
     }
 }
 
-const app = document.getElementById("root");
-app ? ReactDOM.render(<App />, app) : false;
+//const app = document.getElementById("root");
+//app ? ReactDOM.render(<App />, app) : false;
+export default App;
